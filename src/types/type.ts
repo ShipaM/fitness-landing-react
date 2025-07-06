@@ -1,4 +1,4 @@
-export type SectionId = "home" | "benefits" | "ourclasses" | "contactus";
+export type SectionId = "home" | "benefits" | "ourclasses" | "contactus" | "#";
 
 export const navLinks: { id: SectionId; label: string }[] = [
   { id: "home", label: "Home" },
