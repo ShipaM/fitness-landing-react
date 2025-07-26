@@ -4,6 +4,13 @@ import HomePageText from "@/assets/HomePageText.png";
 import HomePageGraphic from "@/assets/HomePageGraphic.png";
 import { ActionButton } from "../ActionButton";
 import { sponsorImages } from "@/utils/sponsorImages";
+import {
+  baseMotion,
+  slideLeft,
+  slideRight,
+  slideUp,
+  withDelay,
+} from "@/utils/motionPresets";
 
 export const Home: FC = memo(() => {
   return (
@@ -11,15 +18,10 @@ export const Home: FC = memo(() => {
       <div className="mx-auto w-5/6 items-center justify-center md:flex md:h-5/6">
         <div className="z-10 mt-32 md:basis-3/5">
           <motion.div
-            initial="hidden"
             className="md:-mt-20"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.5 }}
+            {...baseMotion}
             transition={{ duration: 0.5 }}
-            variants={{
-              hidden: { opacity: 0, x: -50 },
-              visible: { opacity: 1, x: 0 },
-            }}
+            variants={slideLeft}
           >
             <div className="relative">
               <div className="before:absolute before:-top-20 before:-left-20 before:z-[-1] before:content-(--content-evolvetext)">
@@ -33,15 +35,10 @@ export const Home: FC = memo(() => {
             </p>
           </motion.div>
           <motion.div
-            initial="hidden"
             className="mt-8 flex items-center gap-8"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.5 }}
+            {...baseMotion}
             transition={{ duration: 0.5 }}
-            variants={{
-              hidden: { opacity: 0, x: -50 },
-              visible: { opacity: 1, x: 0 },
-            }}
+            variants={slideRight}
           >
             <ActionButton to="contactus" variant="link">
               Join Now
@@ -56,15 +53,10 @@ export const Home: FC = memo(() => {
           </motion.div>
         </div>
         <motion.div
-          initial="hidden"
           className="flex basis-3/5 justify-center md:z-10 md:ml-40 md:mt-16"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.5 }}
+          {...baseMotion}
           transition={{ duration: 0.5 }}
-          variants={{
-            hidden: { opacity: 0, x: 50 },
-            visible: { opacity: 1, x: 0 },
-          }}
+          variants={slideRight}
         >
           <img src={HomePageGraphic} alt="page-graphic" />
         </motion.div>
@@ -74,10 +66,9 @@ export const Home: FC = memo(() => {
           {sponsorImages.map((image, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, amount: 0.5 }}
-              transition={{ delay: index * 0.2, duration: 0.5 }}
+              {...baseMotion}
+              variants={slideUp}
+              transition={withDelay(index)}
             >
               <img src={image.src} alt={image.alt} />
             </motion.div>
