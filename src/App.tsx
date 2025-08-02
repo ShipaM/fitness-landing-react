@@ -1,4 +1,5 @@
 import { Benefits } from "./components/benefits/Benefits";
+import { ContactUs } from "./components/contact/ContactUs";
 import { Home } from "./components/home/Home";
 import { Navbar } from "./components/nav/Navbar";
 import OurClasses from "./components/ourClasses/OurClasses";
@@ -10,6 +11,7 @@ function App() {
       <Home />
       <Benefits />
       <OurClasses />
+      <ContactUs />
     </div>
   );
 }

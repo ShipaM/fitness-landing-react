@@ -54,6 +54,7 @@ body,
   overflow-x: hidden;
   font-family: var(--font-dm-sans);
   scroll-behavior: smooth;
+  background: var(--color-gray-20);
 }
 
 .swiper-button-next:after,
