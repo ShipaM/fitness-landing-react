@@ -8,4 +8,5 @@ export default defineConfig({
   resolve: {
     alias: [{ find: "@", replacement: path.resolve(process.cwd(), "src") }],
   },
+  base: "/fitness-landing-react/",
 });
