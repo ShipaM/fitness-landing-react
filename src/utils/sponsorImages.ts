@@ -1,6 +1,6 @@
-import SponsorRedBull from "@/assets/sponsorRedbull.png";
-import SponsorForbes from "@/assets/sponsorForbes.png";
-import SponsorFortune from "@/assets/sponsorFortune.png";
+import SponsorRedBull from "@/assets/SponsorRedbull.png";
+import SponsorForbes from "@/assets/SponsorForbes.png";
+import SponsorFortune from "@/assets/SponsorFortune.png";
 
 export const sponsorImages = [
   { src: SponsorRedBull, alt: "Sponsor-RedBull" },
