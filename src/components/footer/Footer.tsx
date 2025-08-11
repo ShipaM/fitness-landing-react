@@ -1,4 +1,4 @@
-import Logo from "@/assets/logo.png";
+import Logo from "@/assets/Logo.png";
 import { footerLinks } from "@/utils/footerLinks";
 import { baseMotion, slideUp, withDelay } from "@/utils/motionPresets";
 import { motion } from "framer-motion";
