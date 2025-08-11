@@ -1,4 +1,4 @@
-import Logo from "@/assets/logo.png";
+import Logo from "@/assets/Logo.png";
 import { ActionButton } from "../ActionButton";
 import { useEffect, useState } from "react";
 import { navLinks, type SectionId } from "@/types/type";
