@@ -8,7 +8,7 @@ import { baseMotion, slideLeft, slideRight } from "@/utils/motionPresets";
 
 export const Benefits = () => {
   return (
-    <section id="benefits" className="mx-auto min-h-full w-5/6 py-20">
+    <section id="benefits" className="mx-auto min-h-full w-5/6 sm:py-15 py-30">
       <motion.div
         {...baseMotion}
         transition={{ duration: 0.9 }}
@@ -22,7 +22,7 @@ export const Benefits = () => {
           into each and every member.
         </p>
       </motion.div>
-      <motion.div className="mt-5 flex items-center justify-between gap-8 md:flex">
+      <motion.div className="mt-5 flex flex-col gap-8 md:flex-row md:justify-between">
         {benefits.map((benefit, index) => (
           <Benefit key={benefit.title} {...benefit} index={index} />
         ))}

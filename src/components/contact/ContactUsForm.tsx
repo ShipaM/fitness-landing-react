@@ -25,7 +25,12 @@ export const ContactUsForm: FC<ContactUsFormProps> = ({
   isSubmitSuccessful,
 }) => {
   return (
-    <form className="relative z-[2]" onSubmit={onSubmit}>
+    <form
+      className="relative z-[2]"
+      onSubmit={onSubmit}
+      // method="POST"
+      // action={"https://formsubmit.co/shipinomaksim@gmail.com"}
+    >
       <TextInput
         placeholder="Name"
         type="text"
@@ -47,7 +52,7 @@ export const ContactUsForm: FC<ContactUsFormProps> = ({
       />
       <button
         type="submit"
-        className="cursor-pointer mt-5 rounded-lg bg-secondary-500 px-20 py-3 transition duration-500 animate hover:text-white"
+        className="uppercase cursor-pointer mt-5 rounded-lg bg-secondary-500 px-20 py-3 transition duration-500 animate hover:text-white"
       >
         Submit
       </button>

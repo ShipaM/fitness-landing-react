@@ -1,8 +1,10 @@
 import { Benefits } from "./components/benefits/Benefits";
 import { ContactUs } from "./components/contact/ContactUs";
+import { Footer } from "./components/footer/Footer";
 import { Home } from "./components/home/Home";
 import { Navbar } from "./components/nav/Navbar";
 import OurClasses from "./components/ourClasses/OurClasses";
+import { ScrollToTop } from "./components/ScrollToTop";
 
 function App() {
   return (
@@ -12,6 +14,8 @@ function App() {
       <Benefits />
       <OurClasses />
       <ContactUs />
+      <Footer />
+      <ScrollToTop />
     </div>
   );
 }

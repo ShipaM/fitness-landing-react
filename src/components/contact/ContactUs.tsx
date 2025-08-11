@@ -18,7 +18,27 @@ export const ContactUs = () => {
     mode: "onTouched",
   });
 
-  const onSubmit = (data: ContactFormType) => {
+  const onSubmit = async (data: ContactFormType) => {
+    try {
+      const response = await fetch(
+        "https://formsubmit.co/ajax/shipinomaksim@gmail.com",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(data),
+        }
+      );
+      const result = await response.json();
+      if (result.success === true) {
+        reset();
+      } else {
+        console.error("Form submission failed:", result);
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+    }
     console.log(data);
     setTimeout(() => {
       alert("Form submitted");
